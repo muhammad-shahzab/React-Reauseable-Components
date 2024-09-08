@@ -1,0 +1,218 @@
+.HP-circular-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.HP-circular-content-circle {
+    background-color: rgba(0, 149, 205, 1);
+    margin-top: 20vmin;
+    margin-bottom: 20vmin;
+
+    border-radius: 50%;
+    width: 70vmin;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+@media (max-aspect-ratio: 1/1) {
+    .HP-circular-content-circle {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .picture-container1 img {
+        width: 30vw;
+        height: auto;
+    }
+}
+
+@media (min-aspect-ratio: 1/1) {
+    .HP-circular-content-circle {
+        width: 70vh;
+        height: 70vh;
+    }
+
+    .picture-container1 img {
+        width: 30vh;
+        height: auto;
+    }
+}
+
+.HP-circularBanner-imgTOP {
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -45%);
+
+
+}
+
+.HP-circularBanner-imgBottom {
+    position: absolute;
+    bottom: 0;
+    width: 120%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(35%);
+}
+
+.HP-circularBanner-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.HP-circularBanner-text h1 {
+    margin-top: -2rem;
+    font-size: clamp(3rem, calc(3vw + 3vh), 7rem);
+    color: #ffffff;
+    text-align: center;
+    line-height: 0.95;
+    font-weight: 600;
+
+}
+
+.HP-circularBanner-text h1 span {
+    color: var(--clr-primary-golden);
+    font-weight: 700;
+}
+
+.HP-circularBanner-text p {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 0.8vw + 0.7vh, 3rem);
+    color: #ffffff;
+    text-align: center;
+}
+
+
+@media (max-width: 615.98px) {
+    .HP-circularBanner-text p {
+        width: 80%;
+        margin-top: 0;
+        font-size: var(--fs-hero-SMD-l);
+
+    }
+    .HP-circularBanner-text h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .HP-circularBanner-text h1 {
+        font-size: var(--fs-hero-SMD-xl);
+    }
+
+    .HP-circularBanner-text h1 span {
+
+        font-size: var(--fs-hero-SMD-xl);
+    }
+
+    .HP-circularBanner-text p {
+        width: 90%;
+        margin-top: 0;
+        font-size: var(--fs-hero-SMD-l);
+
+    }
+
+    .HP-circularBanner-imgBottom {
+
+        transform: translateY(45%);
+    }
+
+    .HP-circularBanner-imgTOP {
+
+
+        transform: translate(-50%, -55%);
+
+
+    }
+}
+
+.HP-circularBanner-para {
+    display: none;
+}
+
+@media (max-width: 425px) {
+    .HP-circularBanner-text p {
+        display: none;
+
+    }
+
+    .HP-circularBanner-para {
+        display: block;
+    }
+
+    .HP-circularBanner-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .overlay-boxes-enhanced {
+        position: relative;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(0, 149, 205, 1) 0%, rgba(0, 126, 167, 1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        margin: 20px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        color: white;
+        min-height: 30vh;
+    }
+
+    .overlay-boxes-enhanced p {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+        font-size: 1.2rem;
+        color: white;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+    }
+
+    .overlay-boxes-enhanced::before,
+    .overlay-boxes-enhanced::after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: 1;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .overlay-boxes-enhanced::before {
+        top: 15%;
+        left: 10%;
+    }
+
+    .overlay-boxes-enhanced::after {
+        bottom: 15%;
+        right: 10%;
+    }
+}
+
+
+@media (max-width: 325px) {
+    .HP-circularBanner-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .HP-circularBanner-text h1 span {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
